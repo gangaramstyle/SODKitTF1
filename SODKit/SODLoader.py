@@ -428,7 +428,7 @@ class SODLoader():
         return loadmat(path)
 
     def load_DICOM_2D(self, path, dtype=np.int16):
-         """
+        """
         This function loads a 2D DICOM file and stores it into a numpy array. From Bone Age
         :param path: The path of the DICOM files
         :param: dtype = what data type to save the image as
@@ -445,10 +445,6 @@ class SODLoader():
         except:
             print ('Unable to Load DICOM file: %s' % path)
             return -1
-
-        return  load_DICOM_2D_py(self, ndimage, dtype=np.int16)
-
-    def load_DICOM_2D_py(self, ndimage, dtype=np.int16):
 
         # Retreive the dimensions of the scan
         try: dims = np.array([int(ndimage.Columns), int(ndimage.Rows)])
